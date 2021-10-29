@@ -1,21 +1,22 @@
 package dataStructures;
 
-public class MyArrayListImp<E> implements MyArrayList
+public class MyArrayListImp<E> implements MyArrayList<E>
 {
+
     @Override
-    public void add(Object element)
+    public void add(E element)
     {
 
     }
 
     @Override
-    public Object get(int index)
+    public E get(int index)
     {
         return null;
     }
 
     @Override
-    public void remove(Object element)
+    public void remove(E element)
     {
 
     }
@@ -33,8 +34,7 @@ public class MyArrayListImp<E> implements MyArrayList
     }
 
     @Override
-    public boolean isEmpty()
-    {
+    public boolean isEmpty() {
         return false;
     }
 }
