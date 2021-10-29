@@ -1,9 +1,8 @@
 package dataStructures;
 
-import org.junit.jupiter.api.Test;
-
 import java.util.ArrayList;
 
+import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class MyArrayListTest
@@ -20,22 +19,41 @@ public class MyArrayListTest
     @Test void testGet()
     {
         ArrayList<Integer> list = new ArrayList<>();
-        list.add(1);
-
+        for(int i = 0; i < 1000; i++)
+        {
+            list.add(i);
+        }
+        assertEquals(0, list.get(0));
+        assertEquals(10, list.get(10));
+        assertEquals(999, list.get(999));
     }
 
     @Test void testRemove()
     {
-
+        ArrayList<Integer> list = new ArrayList<>();
+        for(int i = 0; i < 1000; i++)
+        {
+            list.add(i);
+        }
+        assertEquals(0, list.get(0));
+        list.remove(0);
+        assertEquals(1, list.get(0));
+        assertEquals(999, list.get(998));
     }
 
     @Test void testSize_0()
     {
-
+        ArrayList<Integer> list = new ArrayList<>();
+        assertEquals(0, list.size());
     }
 
     @Test void testSize_gt0()
     {
-
+        ArrayList<Integer> list = new ArrayList<>();
+        for(int i = 0; i < 1000; i++)
+        {
+            list.add(i);
+        }
+        assertEquals(1000, list.size());
     }
 }
