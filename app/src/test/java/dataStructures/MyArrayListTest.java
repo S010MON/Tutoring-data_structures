@@ -9,7 +9,7 @@ public class MyArrayListTest
 {
     @Test void testAdd()
     {
-        MyArrayList<Integer> list = new MyArrayListImp<>();
+        MyLinkedList<Integer> list = new MyLinkedListExample<>();
         for(int i = 0; i < 1000; i++)
         {
             list.add(i);
@@ -18,7 +18,7 @@ public class MyArrayListTest
 
     @Test void testGet()
     {
-        MyArrayList<Integer> list = new MyArrayListImp<>();
+        MyLinkedList<Integer> list = new MyLinkedListExample<>();
         for(int i = 0; i < 1000; i++)
         {
             list.add(i);
@@ -30,7 +30,7 @@ public class MyArrayListTest
 
     @Test void testRemove()
     {
-        MyArrayList<Integer> list = new MyArrayListImp<>();
+        MyLinkedList<Integer> list = new MyLinkedListExample<>();
         for(int i = 0; i < 1000; i++)
         {
             list.add(i);
@@ -43,13 +43,13 @@ public class MyArrayListTest
 
     @Test void testSize_0()
     {
-        MyArrayList<Integer> list = new MyArrayListImp<>();
+        MyLinkedList<Integer> list = new MyLinkedListExample<>();
         assertEquals(0, list.size());
     }
 
     @Test void testSize_gt0()
     {
-        MyArrayList<Integer> list = new MyArrayListImp<>();
+        MyLinkedList<Integer> list = new MyLinkedListExample<>();
         for(int i = 0; i < 1000; i++)
         {
             list.add(i);

@@ -40,13 +40,48 @@ public class MyLinkedListExample<T> implements MyLinkedList<T>
     @Override
     public void remove(T element)
     {
+        // Deal with root being element to remove
+        if(root.value == element) {
+            root = root.next;
+            size--;
+        }
 
+        Node<T> previousNode = root;            // We keep track of the previous node to reset the pointer
+        Node<T> currentNode = root.next;
+        while (currentNode.hasNext())
+        {
+            if(currentNode.value == element) {
+                previousNode.next = currentNode.next;   // Remove the link to the item, let garbage collector deal with rest
+                size--;
+            }
+
+            previousNode = previousNode.next;
+            currentNode = currentNode.next;
+        }
     }
 
     @Override
     public void remove(int index)
     {
+        if(index == 0)
+        {
+            root = root.next;
+            size--;
+            return;
+        }
 
+        int counter = 0;
+        Node<T> previousNode = root.next;
+        Node<T> currentNode = root;
+        while (counter != index && currentNode.hasNext())
+        {
+            previousNode = currentNode;
+            currentNode = currentNode.next;
+            counter++;
+        }
+
+        previousNode.next = currentNode.next;
+        size--;
     }
 
     @Override
