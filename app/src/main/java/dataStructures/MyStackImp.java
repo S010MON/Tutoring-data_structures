@@ -1,25 +1,40 @@
 package dataStructures;
 
-public class MyStackImp<E> implements MyStack<E>
+public class MyStackImp<T> implements MyStack<T>
 {
 
+    private T[] list;
+
+    public MyStackImp()
+    {
+        list = (T[]) new Object[4];
+    }
+
     @Override
-    public void push(E element) {
+    public void push(T element) {
 
     }
 
     @Override
-    public E pop() {
+    public T pop()
+    {
         return null;
     }
 
     @Override
-    public E peek() {
+    public T peek()
+    {
+        return null;
+    }
+
+    private T[] resize(T[] list)
+    {
         return null;
     }
 
     @Override
-    public boolean isEmpty() {
+    public boolean isEmpty()
+    {
         return false;
     }
 }
