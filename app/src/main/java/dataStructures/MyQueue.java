@@ -1,10 +1,10 @@
 package dataStructures;
 
-public interface MyQueue<E>
+public interface MyQueue<T>
 {
-    void enqueue(E element);
+    void enqueue(T element);
 
-    E dequeue();
+    T dequeue();
 
     boolean isEmpty();
 }
