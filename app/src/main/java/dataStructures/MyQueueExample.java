@@ -17,17 +17,28 @@ public class MyQueueExample<T> implements MyQueue<T>
     @Override
     public void enqueue(T element)
     {
-
+        stack1.add(element);
     }
 
     @Override
     public T dequeue()
     {
-        return null;
+        if(stack2.isEmpty())
+           transferStacks();
+        return stack2.pop();
+    }
+
+    private void transferStacks()
+    {
+        while (!stack1.isEmpty())
+        {
+            stack2.push(stack1.pop());
+        }
     }
 
     @Override
-    public boolean isEmpty() {
-        return false;
+    public boolean isEmpty()
+    {
+        return stack1.isEmpty() && stack2.isEmpty();
     }
 }
