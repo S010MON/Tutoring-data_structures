@@ -1,4 +1,4 @@
-package dataStructures;
+package dataStructures.linkedList;
 
 public interface MyLinkedList<E>
 {

@@ -1,5 +1,7 @@
 package dataStructures;
 
+import dataStructures.queue.MyQueue;
+import dataStructures.queue.MyQueueExample;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

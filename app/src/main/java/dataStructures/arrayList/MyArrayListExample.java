@@ -1,4 +1,4 @@
-package dataStructures;
+package dataStructures.arrayList;
 
 public class MyArrayListExample<T> implements MyArrayList<T>
 {

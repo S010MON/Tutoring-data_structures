@@ -1,5 +1,7 @@
 package dataStructures;
 
+import dataStructures.linkedList.MyLinkedList;
+import dataStructures.linkedList.MyLinkedListImp;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

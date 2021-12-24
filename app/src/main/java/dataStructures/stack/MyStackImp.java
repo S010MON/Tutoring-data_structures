@@ -1,4 +1,4 @@
-package dataStructures;
+package dataStructures.stack;
 
 public class MyStackImp<T> implements MyStack<T>
 {

@@ -1,5 +1,7 @@
 package dataStructures;
 
+import dataStructures.stack.MyStack;
+import dataStructures.stack.MyStackExample;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

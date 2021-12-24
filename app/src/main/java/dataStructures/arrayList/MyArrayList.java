@@ -1,4 +1,4 @@
-package dataStructures;
+package dataStructures.arrayList;
 
 public interface MyArrayList<E>
 {

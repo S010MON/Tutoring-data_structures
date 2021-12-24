@@ -1,4 +1,4 @@
-package dataStructures;
+package dataStructures.stack;
 
 public interface MyStack<E>
 {

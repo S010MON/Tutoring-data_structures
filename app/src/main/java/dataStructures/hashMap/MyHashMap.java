@@ -1,4 +1,4 @@
-package dataStructures;
+package dataStructures.hashMap;
 
 public interface MyHashMap<K,V>
 {
