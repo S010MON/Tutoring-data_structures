@@ -1,4 +1,6 @@
 package dataStructures.hashMap;
 
-public class MyHashMapImp {
+public class MyHashMapImp
+{
+
 }
