@@ -1,6 +1,6 @@
 package dataStructures.hashMap;
 
-public class MyHashMapExample<K,V> implements MyHashMap
+public class MyHashMapExample<K,V> implements MyHashMap<K,V>
 {
     private V[] values;
 
@@ -14,16 +14,18 @@ public class MyHashMapExample<K,V> implements MyHashMap
     {
         K key_ = (K) key;
         V value_ = (V) value;
-        int hash = key_.hashCode();
+        int hash = Math.abs(key_.hashCode());
         if(hash >= values.length)
             values = resize(values, hash);
 
-        values[hash] = (V) value_;
+        values[hash] = value_;
     }
 
     @Override
     public Object get(Object key) {
-        return null;
+        K key_ = (K) key;
+        int hash = Math.abs(key_.hashCode());
+        return values[hash];
     }
 
     @Override
@@ -40,10 +42,7 @@ public class MyHashMapExample<K,V> implements MyHashMap
     private V[] resize(V[] old_array, int n)
     {
         V[] new_array = (V[]) new Object[n+1];
-        for(int i = 0; i < old_array.length; i++)
-        {
-            new_array[i] = old_array[i];
-        }
+        System.arraycopy(old_array, 0, new_array, 0, old_array.length);
         return new_array;
     }
 }

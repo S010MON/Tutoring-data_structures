@@ -6,9 +6,14 @@ package dataStructures;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
-class AppTest {
-    @Test void appHasAGreeting() {
-        App classUnderTest = new App();
-        assertNotNull(classUnderTest.getGreeting(), "app should have a greeting");
+class AppTest
+{
+    @Test void appHasAGreeting()
+    {
+        Integer i = 1;
+        Integer j = -1;
+
+        System.out.println(i.hashCode());
+        System.out.println(j.hashCode());
     }
 }
