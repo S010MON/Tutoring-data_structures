@@ -3,9 +3,9 @@
 This repo contains ADT skeleton classes, tests, and examples.  Below is an overview of how to download, run, and test the code.  Before reaching out with issues, please check if your questions are answered below.
 
 ## Contents
- - ![Dependencies]()
- - ![Cloning the Repo]()
- - ![Building and Running]()
+ - ![Dependencies](https://github.com/S010MON/Tutoring-data_structures/blob/master/README.md#dependencies)
+ - ![Cloning the Repo](https://github.com/S010MON/Tutoring-data_structures/blob/master/README.md#cloning-the-repo)
+ - ![Building and Running](https://github.com/S010MON/Tutoring-data_structures/blob/master/README.md#building-and-running)
 
 
 ## Dependencies
