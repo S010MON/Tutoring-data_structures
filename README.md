@@ -11,7 +11,7 @@ This repo contains ADT skeleton classes, tests, and examples.  Below is an overv
 ## Dependencies
 Make sure that you have the following software installed before running:
  - ![Java](https://www.java.com/en/) version 11 or later
- - ![here](https://gradle.org/) version 7 or later
+ - ![Gradle](https://gradle.org/) version 7 or later
 
 ## Cloning the Repo
 There are three ways to download the code from this repo:
