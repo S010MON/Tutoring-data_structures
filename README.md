@@ -28,6 +28,10 @@ Open a project using Git within your IDE and copy and paste the URL:
 ```
 https://github.com/S010MON/Tutoring-data_structures
 ```
+Some useful guides for common IDEs:
+1. ![Eclipse](https://www.geeksforgeeks.org/how-to-clone-a-project-from-github-using-eclipse/) 
+2. ![IntelliJ](https://www.jetbrains.com/idea/guide/tutorials/creating-a-project-from-github/clone-from-github/)
+
 
 ### 3. Zip File
 Using the green `code` button, download a zip file of the repo and unzip.  Then open within an IDE or text editor
