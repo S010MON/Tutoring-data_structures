@@ -16,20 +16,20 @@ Make sure that you have the following software installed before running:
 ## Cloning the Repo
 There are three ways to download the code from this repo:
 
-### Git Terminal
+### 1. Git Terminal
 Download ![Git](https://git-scm.com/). Then run the following command:
 
 ```bash
 git clone https://github.com/S010MON/Tutoring-data_structures
 ```
 
-### Git IDE
+### 2. Git IDE
 Open a project using Git within your IDE and copy and paste the URL:
 ```
 https://github.com/S010MON/Tutoring-data_structures
 ```
 
-### Zip File
+### 3. Zip File
 Using the green `code` button, download a zip file of the repo and unzip.  Then open within an IDE or text editor
 ![zip_screenshot.png](https://github.com/S010MON/Tutoring-data_structures/blob/master/zip_screenshot.png)
 
