@@ -1,6 +1,7 @@
 package dataStructures;
 
 import dataStructures.linkedList.MyLinkedList;
+import dataStructures.linkedList.MyLinkedListExample;
 import dataStructures.linkedList.MyLinkedListImp;
 import org.junit.jupiter.api.Test;
 
@@ -29,19 +30,6 @@ public class MyLinkedListTest
         assertEquals(999, list.get(999));
     }
 
-    @Test void testRemove()
-    {
-        MyLinkedList<Integer> list = new MyLinkedListImp<>();
-        for(int i = 0; i < 1000; i++)
-        {
-            list.add(i);
-        }
-        assertEquals(0, list.get(0));
-        list.remove(0);
-        assertEquals(1, list.get(0));
-        assertEquals(999, list.get(998));
-    }
-
     @Test void testSize_0()
     {
         MyLinkedList<Integer> list = new MyLinkedListImp<>();
@@ -56,5 +44,70 @@ public class MyLinkedListTest
             list.add(i);
         }
         assertEquals(1000, list.size());
+    }
+
+    @Test void testRemoveHead()
+    {
+        MyLinkedList<Integer> list = new MyLinkedListImp<>();
+        for(int i = 0; i < 1000; i++)
+        {
+            list.add(i);
+        }
+
+        if(list.get(0) == null)
+            fail("Leon says: get() method must be implemented first!\n");
+
+        assertEquals(0, list.get(0));
+        list.remove(0);
+
+        if(list.size() == 0)
+            fail("Leon says: size() method must be implemented first!\n");
+
+        assertEquals(999, list.size());
+        assertEquals(1, list.get(0));
+        assertEquals(999, list.get(998));
+    }
+
+    @Test void testRemoveTail()
+    {
+        MyLinkedList<Integer> list = new MyLinkedListImp<>();
+        for(int i = 0; i < 1000; i++)
+        {
+            list.add(i);
+        }
+
+        if(list.get(0) == null)
+            fail("Leon says: get() method must be implemented first!\n");
+
+        assertEquals(0, list.get(0));
+        list.remove(999);
+
+        if(list.size() == 0)
+            fail("Leon says: size() method must be implemented first!\n");
+
+        assertEquals(999, list.size());
+        assertEquals(998, list.get(999));
+    }
+
+    @Test void testRemoveMiddle()
+    {
+        MyLinkedList<Integer> list = new MyLinkedListImp<>();
+        for(int i = 0; i < 1000; i++)
+        {
+            list.add(i);
+        }
+
+        if(list.get(0) == null)
+            fail("Leon says: get() method must be implemented first!\n");
+
+        assertEquals(0, list.get(0));
+        list.remove(500);
+
+        if(list.size() == 0)
+            fail("Leon says: size() method must be implemented first!\n");
+
+        assertEquals(999, list.size());
+        assertEquals(499, list.get(499));
+        assertEquals(501, list.get(500));
     }
 }
