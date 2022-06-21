@@ -25,6 +25,18 @@ public class MyLinkedListExample<T> implements MyLinkedList<T>
     }
 
     @Override
+    public int size()
+    {
+        return size;
+    }
+
+    @Override
+    public boolean isEmpty()
+    {
+        return size == 0;
+    }
+
+    @Override
     public T get(int index)
     {
         int counter = 0;
@@ -82,17 +94,5 @@ public class MyLinkedListExample<T> implements MyLinkedList<T>
 
         previousNode.next = currentNode.next;
         size--;
-    }
-
-    @Override
-    public int size()
-    {
-        return size;
-    }
-
-    @Override
-    public boolean isEmpty()
-    {
-        return size == 0;
     }
 }
