@@ -7,6 +7,8 @@ package dataStructures.linkedList;
 public class MyLinkedListImp<E> implements MyLinkedList<E>
 {
     // TODO: You may need to add some field variables ...
+    // `head` a Node where the start of the LinkedList is
+    // `size` a way to keep track of the size
 
     @Override
     public void add(E element)
