@@ -6,7 +6,13 @@ public interface MyHashMap<K, V>
 
     V get(K key);
 
+    boolean remove(K key);
+
+    boolean remove(K key, V value);
+
     boolean contains(K key);
+
+    int size();
 
     boolean isEmpty();
 }

@@ -3,6 +3,7 @@ package dataStructures.hashMap;
 public class MyHashMapExample<K, V> implements MyHashMap<K, V>
 {
     private HashNode<K, V>[] array;                // An array of HashNodes that are the head for linked lists of values
+    private  int size = 0;
 
     /**
      * Constructor, initialise the list of HashNodes that hold the values
@@ -11,6 +12,7 @@ public class MyHashMapExample<K, V> implements MyHashMap<K, V>
     {
         array = new HashNode[16];
     }
+
 
     /**
      * Put a ket/value pair into the hashMap, use the {@code hashCode()} method that is implemented in every object as
@@ -33,28 +35,66 @@ public class MyHashMapExample<K, V> implements MyHashMap<K, V>
                 current = current.next;
             }
             current.next = new HashNode<>(key, value);
+
         }
         else                                                // Else just add the node into the array
             array[hash] = new HashNode<>(key, value);
+
+        size++;
     }
 
+
+    /**
+     * Find the value associated with the key
+     * @param key - A unique hashable object
+     * @return V value (the associated value of type V) Ensure that you return the right value in cases where two objects
+     * hash to the same integer (Hint: use the keys to check the buckets)
+     */
     @Override
     public V get(K key)
     {
-        int hash = Math.abs(key.hashCode());
-        return array[hash].value;
+        int hash = Math.abs(key.hashCode());                // First hash the key to find the bucket for that key
+        HashNode<K, V> bucket = array[hash];
+
+        if(bucket.next == null)                             //  If the bucket has no next, then we know it is the right value!
+            return bucket.value;
+
+        while(bucket.key != key && bucket.next != null)
+            bucket = bucket.next;
+
+        return bucket.value;
     }
 
-    @Override
-    public boolean contains(Object key)
+
+    @Override public boolean remove(K key)
     {
         return false;
     }
+
+
+    @Override public boolean remove(K key, V value)
+    {
+        return false;
+    }
+
+
+    @Override
+    public boolean contains(K key)
+    {
+        return get(key) != null;
+    }
+
+
+    @Override public int size()
+    {
+        return size;
+    }
+
 
     @Override
     public boolean isEmpty()
     {
-        return false;
+        return size == 0;
     }
 
     private HashNode[] resize(HashNode[] old_array, int n)
