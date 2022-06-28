@@ -2,14 +2,14 @@ package dataStructures.hashMap;
 
 public class MyHashMapExample<K, V> implements MyHashMap<K, V>
 {
-    private HashNode<V>[] array;                // An array of HashNodes that are the head for linked lists of values
+    private HashNode<K, V>[] array;                // An array of HashNodes that are the head for linked lists of values
 
     /**
      * Constructor, initialise the list of HashNodes that hold the values
      */
     public MyHashMapExample()
     {
-        array = new HashNode[4];
+        array = new HashNode[16];
     }
 
     /**
@@ -27,15 +27,15 @@ public class MyHashMapExample<K, V> implements MyHashMap<K, V>
 
         if(array[hash] != null)                             // If the array at index [hash] is full, resolve conflict
         {
-            HashNode<V> current = array[hash];
+            HashNode<K, V> current = array[hash];
             while(current.next != null)
             {
                 current = current.next;
             }
-            current.next = new HashNode<>(value);
+            current.next = new HashNode<>(key, value);
         }
         else                                                // Else just add the node into the array
-            array[hash] = new HashNode<>(value);
+            array[hash] = new HashNode<>(key, value);
     }
 
     @Override
@@ -62,17 +62,5 @@ public class MyHashMapExample<K, V> implements MyHashMap<K, V>
         HashNode[] new_array = new HashNode[n+1];
         System.arraycopy(old_array, 0, new_array, 0, old_array.length);
         return new_array;
-    }
-}
-
-class HashNode<V>
-{
-    public V value;
-    public HashNode<V> next;
-
-    public HashNode(V value)
-    {
-        this.value = value;
-        next = null;
     }
 }
