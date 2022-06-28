@@ -1,6 +1,6 @@
 package dataStructures.hashMap;
 
-public interface MyHashMap<K,V>
+public interface MyHashMap<K, V>
 {
     void put(K key, V value);
 
