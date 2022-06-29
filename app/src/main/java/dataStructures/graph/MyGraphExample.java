@@ -1,7 +1,19 @@
 package dataStructures.graph;
 
-public class MyGraphImp<E> implements MyGraph<E>
+import java.util.ArrayList;
+import java.util.HashSet;
+
+public class MyGraphExample<E> implements MyGraph<E>
 {
+    private HashSet<E> nodes;
+    private ArrayList<Edge<E>> edges;
+
+    public MyGraphExample()
+    {
+        nodes = new HashSet<>();
+        edges = new ArrayList<>();
+    }
+
 
     /**
      * Adds a new vertex into the graph with the value {@code value}
@@ -10,8 +22,9 @@ public class MyGraphImp<E> implements MyGraph<E>
      */
     @Override public void addVertex(E value)
     {
-
+        nodes.add(value);
     }
+
 
     /**
      * Remove a vertex from the graph
@@ -21,7 +34,7 @@ public class MyGraphImp<E> implements MyGraph<E>
      */
     @Override public boolean removeVertex(E value)
     {
-        return false;
+        return nodes.remove(value);
     }
 
 
@@ -37,7 +50,12 @@ public class MyGraphImp<E> implements MyGraph<E>
      */
     @Override public void addEdge(E valueFrom, E valueTo)
     {
+        if(!nodes.contains(valueFrom))
+            throw new RuntimeException("valueFrom node not found in graph");
+        if(!nodes.contains(valueTo))
+            throw new RuntimeException("valueTo node not found in graph");
 
+        edges.add(new Edge<>(valueFrom, valueTo));
     }
 
     /**
@@ -49,27 +67,25 @@ public class MyGraphImp<E> implements MyGraph<E>
      */
     @Override public boolean removeEdge(E valueFrom, E valueTo)
     {
+        for(Edge<E> currentEdge: edges)
+        {
+            if(currentEdge.to.equals(valueFrom) && currentEdge.from.equals(valueFrom))
+            {
+                edges.remove(currentEdge);
+                return true;
+            }
+        }
+
         return false;
     }
 
-    /**
-     * Conducts a depth first search on the graph for the value
-     *
-     * @param value the value being searched for
-     * @return the node it has been found at, or {@code null} if not found
-     */
+
     @Override public E depthFirstSearch(E value)
     {
         return null;
     }
 
 
-    /**
-     * Conducts a breadth first search on the graph for the value
-     *
-     * @param value the value being searched for
-     * @return the node it has been found at, or {@code null} if not found
-     */
     @Override public E breadthFirstSearch(E value)
     {
         return null;
