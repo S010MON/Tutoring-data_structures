@@ -3,14 +3,14 @@ package dataStructures.graph;
 import java.util.ArrayList;
 import java.util.HashSet;
 
-public class MyGraphExample<E> implements MyGraph<E>
+public class MyGraphEdgeListExample<E> implements MyGraph<E>
 {
-    private HashSet<E> nodes;
+    private HashSet<E> vertices;
     private ArrayList<Edge<E>> edges;
 
-    public MyGraphExample()
+    public MyGraphEdgeListExample()
     {
-        nodes = new HashSet<>();
+        vertices = new HashSet<>();
         edges = new ArrayList<>();
     }
 
@@ -22,7 +22,7 @@ public class MyGraphExample<E> implements MyGraph<E>
      */
     @Override public void addVertex(E value)
     {
-        nodes.add(value);
+        vertices.add(value);
     }
 
 
@@ -34,7 +34,7 @@ public class MyGraphExample<E> implements MyGraph<E>
      */
     @Override public boolean removeVertex(E value)
     {
-        return nodes.remove(value);
+        return vertices.remove(value);
     }
 
 
@@ -50,9 +50,9 @@ public class MyGraphExample<E> implements MyGraph<E>
      */
     @Override public void addEdge(E valueFrom, E valueTo)
     {
-        if(!nodes.contains(valueFrom))
+        if(!vertices.contains(valueFrom))
             throw new RuntimeException("valueFrom node not found in graph");
-        if(!nodes.contains(valueTo))
+        if(!vertices.contains(valueTo))
             throw new RuntimeException("valueTo node not found in graph");
 
         edges.add(new Edge<>(valueFrom, valueTo));
@@ -77,6 +77,22 @@ public class MyGraphExample<E> implements MyGraph<E>
         }
 
         return false;
+    }
+
+    /**
+     * @return the number of edges in the graph
+     */
+    @Override public int edges()
+    {
+        return edges.size();
+    }
+
+    /**
+     * @return the number of vertices in the graph
+     */
+    @Override public int vertices()
+    {
+        return vertices.size();
     }
 
 

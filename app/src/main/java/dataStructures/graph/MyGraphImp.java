@@ -52,6 +52,24 @@ public class MyGraphImp<E> implements MyGraph<E>
         return false;
     }
 
+
+    /**
+     * @return the number of edges in the graph
+     */
+    @Override public int edges()
+    {
+        return 0;
+    }
+
+
+    /**
+     * @return the number of vertices in the graph
+     */
+    @Override public int vertices()
+    {
+        return 0;
+    }
+
     /**
      * Conducts a depth first search on the graph for the value
      *

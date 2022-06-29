@@ -33,6 +33,19 @@ public interface MyGraph<E>
      */
     boolean removeEdge(E valueFrom, E valueTo);
 
+
+    /**
+     * @return the number of edges in the graph
+     */
+    int edges();
+
+
+    /**
+     * @return the number of vertices in the graph
+     */
+    int vertices();
+
+
     /**
      * Conducts a depth first search on the graph for the value
      * @param value the value being searched for
