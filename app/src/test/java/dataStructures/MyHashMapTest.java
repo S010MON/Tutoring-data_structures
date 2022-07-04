@@ -94,40 +94,47 @@ public class MyHashMapTest
      */
     @Test void integer_string_nonsequential_with_conflict()
     {
-        MyHashMap<Integer, String> map = new MyHashMapExample<>();
+        MyHashMap<Small, String> map = new MyHashMapExample<>();
 
-        Integer[] exp_key = {3475,27444,3,4882,-1,4772,4022,-1220,40,200,482762,4472,4942,3475,27444,3,4882,-1,4772,4022,-1220,40,200,482762,4472,4942};
-        String[] exp_value = {"a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"};
+        Integer[] exp_key = {  1,  2,  3 , 4 ,-5 ,257,258,259,260,261};
+        String[] exp_value = {"a","b","c","d","e","f","g","h","i","j"};
 
         for(int i = 0; i < exp_key.length; i++)
         {
-            map.put(exp_key[i],exp_value[i]);
+            map.put(new Small(exp_key[i]),exp_value[i]);
         }
 
         for(int i = 0; i < exp_key.length; i++)
         {
-            assertEquals(exp_value[i], map.get(exp_key[i]));
+            assertEquals(exp_value[i], map.get(new Small(exp_key[i])));
         }
     }
+}
 
-    /**
-     * Test inserting data into the hashmap with non-sequential String keys where some keys conflict to the same hash
-     */
-    @Test void string_string_nonsequential_with_conflict()
+
+/**
+ * A class that holds a short number n that when hashed is mod 256
+ */
+class Small
+{
+    short s;
+
+    public Small(int i)
     {
-        MyHashMap<String, String> map = new MyHashMapExample<>();
+        this.s = (short) i;
+    }
 
-        String[] exp_key = {"a","b","c","d","e","f","g","h","i","j","k","l","n","m","l","k","j","i","h","g","f","e","d","c","b","a"};
-        String[] exp_value = {"a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"};
+    @Override
+    public int hashCode()
+    {
+        return  Math.abs(s) % 256;
+    }
 
-        for(int i = 0; i < exp_key.length; i++)
-        {
-            map.put(exp_key[i],exp_value[i]);
-        }
-
-        for(int i = 0; i < exp_key.length; i++)
-        {
-            assertEquals(exp_value[i], map.get(exp_key[i]));
-        }
+    @Override
+    public boolean equals(Object other)
+    {
+        if(other instanceof Small)
+            return ((Small) other).s == s;
+        return false;
     }
 }

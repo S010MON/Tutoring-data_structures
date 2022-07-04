@@ -59,7 +59,7 @@ public class MyHashMapExample<K, V> implements MyHashMap<K, V>
         if(bucket.next == null)                             //  If the bucket has no next, then we know it is the right value!
             return bucket.value;
 
-        while(bucket.key != key && bucket.next != null)
+        while(!bucket.key.equals(key))
             bucket = bucket.next;
 
         return bucket.value;
