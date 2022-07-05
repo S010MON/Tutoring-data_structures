@@ -2,6 +2,7 @@ package dataStructures;
 
 import dataStructures.hashMap.MyHashMap;
 import dataStructures.hashMap.MyHashMapExample;
+import dataStructures.hashMap.MyHashMapImp;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -14,7 +15,7 @@ public class MyHashMapTest
      */
     @Test void integer_string_sequential_no_conflict()
     {
-        MyHashMap<Integer, String> map = new MyHashMapExample<>();
+        MyHashMap<Integer, String> map = new MyHashMapImp<>();
 
         String[] exp = {"a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"};
 
@@ -34,7 +35,7 @@ public class MyHashMapTest
      */
     @Test void string_string_sequential_no_conflict()
     {
-        MyHashMap<String, String> map = new MyHashMapExample<>();
+        MyHashMap<String, String> map = new MyHashMapImp<>();
 
         String[] exp = {"a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"};
 
@@ -52,7 +53,7 @@ public class MyHashMapTest
      */
     @Test void integer_string_nonsequential_no_conflict()
     {
-        MyHashMap<Integer, String> map = new MyHashMapExample<>();
+        MyHashMap<Integer, String> map = new MyHashMapImp<>();
 
         Integer[] exp_key = {4852,1582,188492,5821,9562,11193,94552,233457,3284,10,3303,4883,4002,3475,27444,3,4882,-1,4772,4022,-1220,40,200,482762,4472,4942};
         String[] exp_value = {"a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"};
@@ -73,7 +74,7 @@ public class MyHashMapTest
      */
     @Test void string_string_nonsequential_no_conflict()
     {
-        MyHashMap<String, String> map = new MyHashMapExample<>();
+        MyHashMap<String, String> map = new MyHashMapImp<>();
 
         String[] exp_key = {"z","y","x","w","v","u","t","s","r","q","p","o","n","m","l","k","j","i","h","g","f","e","d","c","b","a"};
         String[] exp_value = {"a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"};
@@ -94,7 +95,7 @@ public class MyHashMapTest
      */
     @Test void integer_string_nonsequential_with_conflict()
     {
-        MyHashMap<Small, String> map = new MyHashMapExample<>();
+        MyHashMap<Small, String> map = new MyHashMapImp<>();
 
         Integer[] exp_key = {  1,  2,  3 , 4 ,-5 ,257,258,259,260,261};
         String[] exp_value = {"a","b","c","d","e","f","g","h","i","j"};
