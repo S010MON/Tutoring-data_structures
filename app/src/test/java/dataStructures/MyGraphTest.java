@@ -27,6 +27,19 @@ public class MyGraphTest
         assertEquals(1, G.vertices());
     }
 
+    @Test void testRemoveVertexRepeated()
+    {
+        MyGraph<Integer> G = new MyGraphEdgeListExample<>();
+
+        G.addVertex(1);
+        G.addVertex(1);
+
+        if(G.vertices() == 1)
+            System.out.println("\nLeon says:\nCheck that all vertices are removed (or only one is added for each value)");
+
+        assertEquals(0, G.vertices());
+    }
+
     @Test void testAddEdge()
     {
         MyGraph<Integer> G = new MyGraphEdgeListExample<>();
@@ -62,7 +75,7 @@ public class MyGraphTest
 
         if(G.edges() == 2)
         {
-            System.out.println("\n**NOTE** Two of the same edge were added - when adding an edge check whether it is already in graph!");
+            System.out.println("\nLeon says:\nTwo of the same edge were added - when adding an edge check whether it is already in graph!");
         }
 
         assertEquals(1, G.edges());

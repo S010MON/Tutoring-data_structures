@@ -55,13 +55,13 @@ public class MyLinkedListTest
         }
 
         if(list.get(0) == null)
-            fail("Leon says: get() method must be implemented first!\n");
+            fail("\nLeon says:\nget() method must be implemented first!\n");
 
         assertEquals(0, list.get(0));
         list.remove(0);
 
         if(list.size() == 0)
-            fail("Leon says: size() method must be implemented first!\n");
+            fail("\nLeon says:\nsize() method must be implemented first!\n");
 
         assertEquals(999, list.size());
         assertEquals(1, list.get(0));
@@ -77,13 +77,13 @@ public class MyLinkedListTest
         }
 
         if(list.get(0) == null)
-            fail("Leon says: get() method must be implemented first!\n");
+            fail("\nLeon says:\nget() method must be implemented first!\n");
 
         assertEquals(0, list.get(0));
         list.remove(999);
 
         if(list.size() == 0)
-            fail("Leon says: size() method must be implemented first!\n");
+            fail("\nLeon says:\nsize() method must be implemented first!\n");
 
         assertEquals(999, list.size());
         assertEquals(998, list.get(999));
@@ -98,13 +98,13 @@ public class MyLinkedListTest
         }
 
         if(list.get(0) == null)
-            fail("Leon says: get() method must be implemented first!\n");
+            fail("\nLeon says:\nget() method must be implemented first!\n");
 
         assertEquals(0, list.get(0));
         list.remove(500);
 
         if(list.size() == 0)
-            fail("Leon says: size() method must be implemented first!\n");
+            fail("\nLeon says:\nsize() method must be implemented first!\n");
 
         assertEquals(999, list.size());
         assertEquals(499, list.get(499));
