@@ -1,5 +1,8 @@
 package dataStructures;
 
+import dataStructures.arrayList.MyArrayList;
+import dataStructures.arrayList.MyArrayListExample;
+import dataStructures.arrayList.MyArrayListImp;
 import dataStructures.linkedList.MyLinkedList;
 import dataStructures.linkedList.MyLinkedListExample;
 import org.junit.jupiter.api.Test;
@@ -9,7 +12,7 @@ public class MyArrayListTest
 {
     @Test void testAdd()
     {
-        MyLinkedList<Integer> list = new MyLinkedListExample<>();
+        MyArrayList<Integer> list = new MyArrayListImp<>();
         for(int i = 0; i < 1000; i++)
         {
             list.add(i);
@@ -18,7 +21,7 @@ public class MyArrayListTest
 
     @Test void testGet()
     {
-        MyLinkedList<Integer> list = new MyLinkedListExample<>();
+        MyArrayList<Integer> list = new MyArrayListImp<>();
         for(int i = 0; i < 1000; i++)
         {
             list.add(i);
@@ -30,7 +33,7 @@ public class MyArrayListTest
 
     @Test void testRemove()
     {
-        MyLinkedList<Integer> list = new MyLinkedListExample<>();
+        MyArrayList<Integer> list = new MyArrayListImp<>();
         for(int i = 0; i < 1000; i++)
         {
             list.add(i);
@@ -43,13 +46,13 @@ public class MyArrayListTest
 
     @Test void testSize_0()
     {
-        MyLinkedList<Integer> list = new MyLinkedListExample<>();
+        MyArrayList<Integer> list = new MyArrayListImp<>();
         assertEquals(0, list.size());
     }
 
     @Test void testSize_gt0()
     {
-        MyLinkedList<Integer> list = new MyLinkedListExample<>();
+        MyArrayList<Integer> list = new MyArrayListImp<>();
         for(int i = 0; i < 1000; i++)
         {
             list.add(i);
