@@ -2,6 +2,7 @@ package dataStructures;
 
 import dataStructures.graph.MyGraph;
 import dataStructures.graph.MyGraphEdgeListExample;
+import dataStructures.graph.MyGraphImp;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -9,7 +10,7 @@ public class MyGraphTest
 {
     @Test void testAddVertex()
     {
-        MyGraph<Integer> G = new MyGraphEdgeListExample<>();
+        MyGraph<Integer> G = new MyGraphImp<>();
 
         for(int i = 0; i < 100 ; i++)
             G.addVertex(i);
@@ -19,7 +20,7 @@ public class MyGraphTest
 
     @Test void testAddVertexRepeated()
     {
-        MyGraph<Integer> G = new MyGraphEdgeListExample<>();
+        MyGraph<Integer> G = new MyGraphImp<>();
 
         for(int i = 0; i < 100 ; i++)
             G.addVertex(1);
@@ -29,7 +30,7 @@ public class MyGraphTest
 
     @Test void testRemoveVertexRepeated()
     {
-        MyGraph<Integer> G = new MyGraphEdgeListExample<>();
+        MyGraph<Integer> G = new MyGraphImp<>();
 
         G.addVertex(1);
         G.addVertex(1);
@@ -42,7 +43,7 @@ public class MyGraphTest
 
     @Test void testAddEdge()
     {
-        MyGraph<Integer> G = new MyGraphEdgeListExample<>();
+        MyGraph<Integer> G = new MyGraphImp<>();
 
         G.addVertex(1);
         G.addVertex(2);
@@ -53,7 +54,7 @@ public class MyGraphTest
 
     @Test void testAddEdgeMany()
     {
-        MyGraph<Integer> G = new MyGraphEdgeListExample<>();
+        MyGraph<Integer> G = new MyGraphImp<>();
 
         for(int i = 0; i < 100 ; i++)
             G.addVertex(i);
@@ -66,7 +67,7 @@ public class MyGraphTest
 
     @Test void testAddEdgeRepeated()
     {
-        MyGraph<Integer> G = new MyGraphEdgeListExample<>();
+        MyGraph<Integer> G = new MyGraphImp<>();
 
         G.addVertex(1);
         G.addVertex(2);
