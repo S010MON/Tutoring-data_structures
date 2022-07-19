@@ -8,6 +8,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class MyGraphTest
 {
+
     @Test void testAddVertex()
     {
         MyGraph<Integer> G = new MyGraphImp<>();

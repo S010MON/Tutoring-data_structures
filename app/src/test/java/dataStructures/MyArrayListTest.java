@@ -1,10 +1,7 @@
 package dataStructures;
 
 import dataStructures.arrayList.MyArrayList;
-import dataStructures.arrayList.MyArrayListExample;
 import dataStructures.arrayList.MyArrayListImp;
-import dataStructures.linkedList.MyLinkedList;
-import dataStructures.linkedList.MyLinkedListExample;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
