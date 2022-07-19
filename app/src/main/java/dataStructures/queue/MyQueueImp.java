@@ -18,7 +18,7 @@ public class MyQueueImp<T> implements MyQueue<T>
     }
 
     /**
-     * Adds a new element to the back of the queue
+     * Add a new element to the back of the queue
      * @param element
      */
     @Override
@@ -28,8 +28,9 @@ public class MyQueueImp<T> implements MyQueue<T>
     }
 
     /**
-     * Removes an element from the front of the queue
-     * @return
+     * Return the front element of the queue and remove it from
+     * the data structure. Throw a runtime exception if the queue is empty
+     * @return the front element
      */
     @Override
     public T dequeue()
