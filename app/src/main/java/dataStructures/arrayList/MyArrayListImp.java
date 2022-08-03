@@ -13,12 +13,13 @@ public class MyArrayListImp<T> implements MyArrayList<T>
     @Override
     public void add(T element)
     {
-        // TODO resize the array if it is full, and add the last element
+        // TODO resize the array if it is full, and add the last element.  Check out the resize() method
     }
 
     private T[] resize(T[] oldList)
     {
-        int n = 0;                              // This value determines the size of the new list
+        // TODO calculate n! This value determines the size of the new list (should not be 0)
+        int n = 0;
         T[] newList = (T[]) new Object[n];      // Create a new list of size n
 
         // TODO add your code to add all the elements to the new list and increment the size
