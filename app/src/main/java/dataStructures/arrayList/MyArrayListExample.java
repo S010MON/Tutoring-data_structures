@@ -47,11 +47,11 @@ public class MyArrayListExample<T> implements MyArrayList<T>
     @Override
     public void remove(int index)
     {
-        shiftRight(index);
+        shiftLeft(index);
         size--;
     }
 
-    private void shiftRight(int fillIndex)
+    private void shiftLeft(int fillIndex)
     {
         for(int i = fillIndex; i < list.length-1; i++)
         {

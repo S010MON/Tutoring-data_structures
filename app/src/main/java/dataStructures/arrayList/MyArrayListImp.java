@@ -49,7 +49,7 @@ public class MyArrayListImp<T> implements MyArrayList<T>
          */
     }
 
-    private void shiftRight(int fillIndex)
+    private void shiftLeft(int fillIndex)
     {
         /* TODO  add your code here:
             If we remove 3, then we need to shift everything left after it to close the gap we have just made
