@@ -10,12 +10,19 @@ public class MyLinkedListImp<E> implements MyLinkedList<E>
     // `head` a Node where the start of the LinkedList is
     // `size` a way to keep track of the size
 
+    /**
+     * Add an element to the end of the linked list
+     * @param element
+     */
     @Override
     public void add(E element)
     {
         // TODO: Your code here, implement me first!
     }
 
+    /**
+     * @return the integer number of elements in the list
+     */
     @Override
     public int size()
     {
@@ -23,6 +30,9 @@ public class MyLinkedListImp<E> implements MyLinkedList<E>
         return 0;
     }
 
+    /**
+     * @return true if the list is empty, false if the list contains any elements
+     */
     @Override
     public boolean isEmpty()
     {
@@ -30,6 +40,11 @@ public class MyLinkedListImp<E> implements MyLinkedList<E>
         return false;
     }
 
+    /**
+     * Get an element from the list at the point index
+     * @param index a non-negative index between zero and the size of the list minus 1
+     * @return an element of type E
+     */
     @Override
     public E get(int index)
     {
@@ -37,12 +52,20 @@ public class MyLinkedListImp<E> implements MyLinkedList<E>
         return null;
     }
 
+    /**
+     * Remove the element at the index, filling the gap left by the removal
+     * @param index a non-negative index between zero and the size of the list minus 1
+     */
     @Override
     public void remove(int index)
     {
         // TODO: Your code here, implement me last.
     }
 
+    /**
+     * Remove the element from the list (compared by element content)
+     * @param element a type E to be removed from the ArrayList
+     */
     @Override
     public void remove(E element)
     {
