@@ -47,6 +47,25 @@ public class MyQueueImp<T> implements MyQueue<T>
     }
 
     /**
+     * Take a look at the front of the queue without removing it
+     * @return the first element of the queue
+     */
+    @Override
+    public T first()
+    {
+        return null;
+    }
+
+    /**
+     * @return the number of elements in the queue
+     */
+    @Override
+    public int size()
+    {
+        return -1;
+    }
+
+    /**
      * @return true if both stacks are empty
      */
     @Override
