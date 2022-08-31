@@ -1,7 +1,7 @@
 package dataStructures;
 
 import dataStructures.stack.MyStack;
-import dataStructures.stack.MyStackExample;
+import dataStructures.stack.MyStackImp;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -12,7 +12,7 @@ public class MyStackTest
 {
     @Test void testPush()
     {
-        MyStack<Integer> stack = new MyStackExample<>();
+        MyStack<Integer> stack = new MyStackImp<>();
         for (int i = 0; i < 1000; i++)
         {
             stack.push(i);
@@ -21,7 +21,7 @@ public class MyStackTest
 
     @Test void testPop()
     {
-        MyStack<Integer> stack = new MyStackExample<>();
+        MyStack<Integer> stack = new MyStackImp<>();
         for (int i = 0; i < 1000; i++)
         {
             stack.push(i);
@@ -34,7 +34,7 @@ public class MyStackTest
 
     @Test void testPeek()
     {
-        MyStack<Integer> stack = new MyStackExample<>();
+        MyStack<Integer> stack = new MyStackImp<>();
         for (int i = 0; i < 1000; i++)
         {
             stack.push(i);
@@ -47,13 +47,13 @@ public class MyStackTest
 
     @Test void testIsEmpty_true()
     {
-        MyStack<Integer> stack = new MyStackExample<>();
+        MyStack<Integer> stack = new MyStackImp<>();
         assertTrue(stack.isEmpty());
     }
 
     @Test void testIsEmpty_false()
     {
-        MyStack<Integer> stack = new MyStackExample<>();
+        MyStack<Integer> stack = new MyStackImp<>();
         stack.push(0);
         assertFalse(stack.isEmpty());
     }
