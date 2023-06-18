@@ -1,8 +1,8 @@
-package dataStructureExersizes;
+package dataStructureExercises;
 
 import dataStructures.queue.MyQueue;
 import dataStructures.queue.MyQueueImp;
-import dataStructures.queue.ReverseQueueExersize;
+import dataStructures.queue.ReverseQueueExercise;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -22,7 +22,7 @@ public class ReverseQueue {
         queue.enqueue(86);
         queue.enqueue(19);
 
-        MyQueue<Integer> reversedQueue = ReverseQueueExersize.reverseQueue(queue);
+        MyQueue<Integer> reversedQueue = ReverseQueueExercise.reverseQueue(queue);
 
         assertEquals(reversedQueue.dequeue(), 19);
         assertEquals(reversedQueue.dequeue(), 86);
@@ -61,7 +61,7 @@ public class ReverseQueue {
         ArrayList<Double> randList = generateRandomList();
         MyQueue<Double> queue = listToQueue(randList);
 
-        MyQueue<Double> reversedQueue = ReverseQueueExersize.reverseQueue(queue);
+        MyQueue<Double> reversedQueue = ReverseQueueExercise.reverseQueue(queue);
         Collections.reverse(randList);
 
         for(double reversedValue: randList)
