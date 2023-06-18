@@ -1,6 +1,6 @@
 package dataStructures.queue;
 
-public class ReverseQueueExersize {
+public class ReverseQueueExercise {
     /*
     This file provides an opportunity to practice using the Queue implementation.
     Your task is to reverse a Queue.

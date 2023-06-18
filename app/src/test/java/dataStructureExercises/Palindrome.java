@@ -1,6 +1,6 @@
-package dataStructureExersizes;
+package dataStructureExercises;
 
-import dataStructures.stack.PalindromeExersize;
+import dataStructures.stack.PalindromeExercise;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;
@@ -10,7 +10,7 @@ public class Palindrome {
     @Test void testTruePalindromeEasy()
     {
         String text = "racecar";
-        boolean palindromeResult = PalindromeExersize.isPalindrome(text);
+        boolean palindromeResult = PalindromeExercise.isPalindrome(text);
 
         assertTrue(palindromeResult);
     }
@@ -18,7 +18,7 @@ public class Palindrome {
     @Test void testTruePalindromeHard()
     {
         String text = "a man, a plan, a canal: Panama!";
-        boolean palindromeResult = PalindromeExersize.isPalindrome(text);
+        boolean palindromeResult = PalindromeExercise.isPalindrome(text);
 
         assertTrue(palindromeResult);
     }
@@ -26,7 +26,7 @@ public class Palindrome {
     @Test void testFalsePalindrome()
     {
         String text = "This is not a palindrome!";
-        boolean palindromeResult = PalindromeExersize.isPalindrome(text);
+        boolean palindromeResult = PalindromeExercise.isPalindrome(text);
 
         assertFalse(palindromeResult);
     }

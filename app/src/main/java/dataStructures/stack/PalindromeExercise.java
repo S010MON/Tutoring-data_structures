@@ -1,6 +1,6 @@
 package dataStructures.stack;
 
-public class PalindromeExersize {
+public class PalindromeExercise {
     /*
     This class provides an exersize in which you are required to use the MyStackImp class you created.
     Your task is to implement the isPalindrome() method, which is capable of determining if a provided string
