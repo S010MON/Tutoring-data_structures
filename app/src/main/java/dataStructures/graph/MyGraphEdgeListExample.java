@@ -16,7 +16,7 @@ public class MyGraphEdgeListExample<E> implements MyGraph<E>
 
 
     /**
-     * Adds a new vertex into the graph with the value {@code value}
+     * Adds a new vertex into the graph node with the value {@code value}
      *
      * @param value the value of the vertex to be added
      */
