@@ -1,6 +1,7 @@
 package algorithms;
 
 import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class DijkstraTest {
     /**
@@ -30,6 +31,7 @@ public class DijkstraTest {
         { 0, 0, 2, 0, 0, 0, 6, 7, 0 } };
 
         Dijkstra alg = new Dijkstra(graph);
-
+        int[] shortest_dist = alg.findShortestPath(0);
+        assertTrue(shortest_dist.equals(new int[]{0, 4, 12, 19, 21, 11, 9, 8, 14}));
     }
 }

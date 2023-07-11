@@ -11,6 +11,8 @@ import java.util.Arrays;
 
 The following link provides an example of an implemented Dijkstra's algorithm:
  https://www.geeksforgeeks.org/dijkstras-shortest-path-algorithm-greedy-algo-7/
+
+ Remember that the shortest path calculated will be a tree. This fact can be used to check the output of your algorithm.
  */
 public class Dijkstra {
     private int[][] graph;
@@ -34,7 +36,7 @@ public class Dijkstra {
     This method  calculates the shortest distance from the root node to all other nodes in the graph using Dijkstra's algorithm.
      @param root The root node from which the shortest distance to all other nodes must be calculated.
      */
-    public double[] findShortestPath(int root)
+    public int[] findShortestPath(int root)
     {
         return null;
     }
