@@ -36,6 +36,8 @@ public class MyGraphTest
         G.addVertex(1);
         G.addVertex(1);
 
+        G.removeVertex(1);
+
         if(G.vertices() == 1)
             System.out.println("\nLeon says:\nCheck that all vertices are removed (or only one is added for each value)");
 
