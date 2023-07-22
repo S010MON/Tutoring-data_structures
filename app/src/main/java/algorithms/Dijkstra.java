@@ -33,7 +33,7 @@ public class Dijkstra {
     }
 
     /**
-    This method  calculates the shortest distance from the root node to all other nodes in the graph using Dijkstra's algorithm.
+    Calculates the shortest distance from the root node to all other nodes in the graph using Dijkstra's algorithm.
      @param root The root node from which the shortest distance to all other nodes must be calculated.
      */
     public int[] findShortestPath(int root)
